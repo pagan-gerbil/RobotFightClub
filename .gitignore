@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+## this plugin contains large files and needs Git LFS...
+UnityClient/Assets/Plugins/Grpc.Core/
+
+
 # User-specific files
 *.rsuser
 *.suo
