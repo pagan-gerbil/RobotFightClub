@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RobotFightClub.Common\RobotFightClub.Common.csproj" />
     <ProjectReference Include="..\RobotRightClub.Engine\RobotRightClub.Engine.csproj" />
   </ItemGroup>
 
