@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcClientLibrary", "GrpcCl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteControlClientTest", "RemoteControlClientTest\RemoteControlClientTest.csproj", "{F3DB68AE-C015-404D-BA93-089757824E27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotRightClub.Engine", "RobotRightClub.Engine\RobotRightClub.Engine.csproj", "{001AD179-6F40-4702-A866-77E87ECCC09B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotRightClub.Engine", "RobotRightClub.Engine\RobotRightClub.Engine.csproj", "{001AD179-6F40-4702-A866-77E87ECCC09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotFightClub.Engine.Tests", "RobotFightClub.Engine.Tests\RobotFightClub.Engine.Tests.csproj", "{474FE82E-8CB6-40AF-8316-3EDB218E4E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RobotFightClub.Common", "RobotFightClub.Common\RobotFightClub.Common.csproj", "{891EA930-17D1-4271-8264-F9389E22E137}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotFightClub.Common", "RobotFightClub.Common\RobotFightClub.Common.csproj", "{891EA930-17D1-4271-8264-F9389E22E137}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotFightClub.Engine.Tests", "RobotFightClub.Engine.Tests\RobotFightClub.Engine.Tests.csproj", "{3C810737-3D17-4106-8F4C-D83C0AB26069}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +37,14 @@ Global
 		{001AD179-6F40-4702-A866-77E87ECCC09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{001AD179-6F40-4702-A866-77E87ECCC09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{001AD179-6F40-4702-A866-77E87ECCC09B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{474FE82E-8CB6-40AF-8316-3EDB218E4E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{474FE82E-8CB6-40AF-8316-3EDB218E4E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{474FE82E-8CB6-40AF-8316-3EDB218E4E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{474FE82E-8CB6-40AF-8316-3EDB218E4E6C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{891EA930-17D1-4271-8264-F9389E22E137}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{891EA930-17D1-4271-8264-F9389E22E137}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{891EA930-17D1-4271-8264-F9389E22E137}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{891EA930-17D1-4271-8264-F9389E22E137}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C810737-3D17-4106-8F4C-D83C0AB26069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C810737-3D17-4106-8F4C-D83C0AB26069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C810737-3D17-4106-8F4C-D83C0AB26069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C810737-3D17-4106-8F4C-D83C0AB26069}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
