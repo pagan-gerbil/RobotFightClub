@@ -1,9 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using RobotRightClub.Engine;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace RobotFightClub.Engine.Tests
 {
@@ -13,7 +10,8 @@ namespace RobotFightClub.Engine.Tests
         [Test]
         public void ShouldSetupBoardSpacesCorrectlyForQuickStart()
         {
-            var board = new Board();
+            var mockBroadcaster = new Mock<IActionBroadcaster>();
+            var board = new Board(mockBroadcaster.Object);
 
             for (var row = 0; row < 6; row++)
             {

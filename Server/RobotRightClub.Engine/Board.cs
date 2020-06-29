@@ -8,9 +8,11 @@ namespace RobotRightClub.Engine
     public class Board
     {
         private BoardSpace[,] _spaces = new BoardSpace[6, 10];
+        private IActionBroadcaster _actionBroadcaster;
 
-        public Board()
+        public Board(IActionBroadcaster actionBroadcaster)
         {
+            _actionBroadcaster = actionBroadcaster;
             SetupSpaces();
         }
 
