@@ -1,6 +1,7 @@
 ﻿using Moq;
 using NUnit.Framework;
 using RobotRightClub.Engine;
+using RobotRightClub.Engine.BoardActions;
 
 namespace RobotFightClub.Engine.Tests
 {
@@ -27,6 +28,7 @@ namespace RobotFightClub.Engine.Tests
             Assert.That(board.GetSpace(4, 0).BoardTokens, Is.EquivalentTo(new[] { BoardToken.ActivationPad }));
             Assert.That(board.GetSpace(4, 4).BoardTokens, Is.EquivalentTo(new[] { BoardToken.ActivationPad }));
             Assert.That(board.GetSpace(5, 6).BoardTokens, Is.EquivalentTo(new[] { BoardToken.ActivationPad }));
+            mockBroadcaster.Verify(mock => mock.Broadcast(It.Is<AddTokenAction>(with => with.Token.Equals(BoardToken.ActivationPad))), Times.Exactly(6));
 
             Assert.That(board.GetSpace(0, 1).BoardTokens, Is.EquivalentTo(new[] { BoardToken.RobotStart }));
             Assert.That(board.GetSpace(1, 2).BoardTokens, Is.EquivalentTo(new[] { BoardToken.RobotStart }));
@@ -36,6 +38,7 @@ namespace RobotFightClub.Engine.Tests
             Assert.That(board.GetSpace(4, 7).BoardTokens, Is.EquivalentTo(new[] { BoardToken.RobotStart }));
             Assert.That(board.GetSpace(4, 8).BoardTokens, Is.EquivalentTo(new[] { BoardToken.RobotStart }));
             Assert.That(board.GetSpace(5, 2).BoardTokens, Is.EquivalentTo(new[] { BoardToken.RobotStart }));
+            mockBroadcaster.Verify(mock => mock.Broadcast(It.Is<AddTokenAction>(with => with.Token.Equals(BoardToken.RobotStart))), Times.Exactly(8));
 
             Assert.That(board.GetSpace(0, 3).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
             Assert.That(board.GetSpace(0, 6).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
@@ -46,6 +49,7 @@ namespace RobotFightClub.Engine.Tests
             Assert.That(board.GetSpace(3, 7).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
             Assert.That(board.GetSpace(4, 3).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
             Assert.That(board.GetSpace(5, 8).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
+            mockBroadcaster.Verify(mock => mock.Broadcast(It.Is<AddTokenAction>(with => with.Token.Equals(BoardToken.Obstacle))), Times.Exactly(9));
         }
     }
 }
