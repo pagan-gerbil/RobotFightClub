@@ -2,6 +2,11 @@
 using NUnit.Framework;
 using RobotRightClub.Engine;
 using RobotRightClub.Engine.BoardActions;
+using RobotRightClub.Engine.InputActions;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RobotFightClub.Engine.Tests
 {
@@ -50,6 +55,18 @@ namespace RobotFightClub.Engine.Tests
             Assert.That(board.GetSpace(4, 3).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
             Assert.That(board.GetSpace(5, 8).BoardTokens, Is.EquivalentTo(new[] { BoardToken.Obstacle }));
             mockBroadcaster.Verify(mock => mock.Broadcast(It.Is<AddTokenAction>(with => with.Token.Equals(BoardToken.Obstacle))), Times.Exactly(9));
+        }
+
+        [Test]
+        public void ShouldSendInputActionsForFirstPlayerToSelectRobotStartSpace()
+        {
+            var mockBroadcaster = new Mock<IActionBroadcaster>();
+            var board = new Board(mockBroadcaster.Object);
+
+            mockBroadcaster.Verify(
+                mock => mock.RequestInput(
+                    It.Is<IEnumerable<SelectBoardSpaceAction>>(
+                        with => with.Count() == 4))); 
         }
     }
 }

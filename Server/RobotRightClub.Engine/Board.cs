@@ -1,4 +1,5 @@
 ﻿using RobotRightClub.Engine.BoardActions;
+using RobotRightClub.Engine.InputActions;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -46,6 +47,16 @@ namespace RobotRightClub.Engine
             CreateAndRunAction(new AddTokenAction(5, 2, BoardToken.RobotStart));
             CreateAndRunAction(new AddTokenAction(5, 6, BoardToken.ActivationPad));
             CreateAndRunAction(new AddTokenAction(5, 8, BoardToken.Obstacle));
+
+            var firstPlayerSelectSpaceActions = new[]
+            {
+                new SelectBoardSpaceAction(null, 0, 1),
+                new SelectBoardSpaceAction(null, 1, 2),
+                new SelectBoardSpaceAction(null, 3, 2),
+                new SelectBoardSpaceAction(null, 5, 2)
+            };
+
+            _actionBroadcaster.RequestInput(firstPlayerSelectSpaceActions);
         }
 
         public BoardSpace GetSpace(int row, int column)
