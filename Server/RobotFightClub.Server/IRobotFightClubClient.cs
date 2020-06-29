@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using RobotRightClub.Engine;
 
 namespace RobotFightClub.Server
 {
-    public interface IRobotFightClubClient
+    public interface IRobotFightClubClient : IActionBroadcaster
     {
     }
 }
